@@ -49,18 +49,27 @@ h1 {
 }
 
 #red {
-    background-color: #B50717;
+    background-color: #b31828;
+    box-shadow: 0px 10px 1px #6b0303;
+    border-radius: 15px;
 }
 
 #white {
     background-color:#ECECEC;
+    box-shadow: 0px 10px 1px #c4c1c1;
+    border-radius:15px;
 }
 
 #dark_gray {
     background-color:#A2A2A2;
+    box-shadow: 0px 10px 1px #635f5f;
+    border-radius:15px;
+
 }
-#color {
-    background-color: #51D324
+#green {
+    background-color: #51D324;
+    box-shadow: 0px 10px 1px #168331;
+    border-radius:15px;
     /* background-color: #ca9f10; */
 }
 
