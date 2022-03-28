@@ -1,0 +1,44 @@
+BRONZE LEVEL ITEMS (CORE FX PRIORITY)
+
+initial Page
+
+Touchpads to Right side of screen
+- must have a hightlight and likely a sound 
+- eventListeners)
+
+computer must execute first pattern
+- randomly generated
+
+player must follow first pattern
+-array matching an array? Input by touchpads?
+
+Repeat to (x) times - for game demo purposes say 5-7
+- Counter of how many rounds completed - Count after fx completes
+
+start button
+- 
+
+Gamelogic
+- random assignment of pattern (some kind of random array of numbers)
+
+- record keeping of player interaction to follow pattern (a function 
+to iterate/read through and match pattern/numbers)
+
+- breakpoint
+
+- Alert (BOOM!) or GIF if possible
+
+functioning game
+
+
+SILVER
+
+- tie in countdown clock
+- activate GIF (as an Asset)
+- integrate background artwork of a bomb
+
+
+GOLD (Stretch goals)
+
+Modal
+GIF Api of explosions
