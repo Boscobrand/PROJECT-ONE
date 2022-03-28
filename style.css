@@ -1,0 +1,74 @@
+body {
+    display:flex;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Saira Stencil One', cursive;
+    justify-content: center;
+}
+h1 {
+    font-size: 45px;
+    margin: 40px;
+}
+
+.base_plate {
+    position: absolute;
+    background-color: slategray;
+    max-width: 800pxx;
+    min-width:800px;
+    max-height:600x;
+    min-height:600px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 5px #31372B;
+    margin: 100px 
+
+}
+.mounting_plate {
+    position: absolute;
+    background-color: black;
+    max-width: 400pxx;
+    min-width:400px;
+    max-height:500x;
+    min-height:500px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 5px #ACACAA;
+    margin: 150px;
+    margin-left: 475px;
+}
+
+.touchpad_set {
+    display: grid;
+    position: relative;
+    grid-template-rows: 150px 150px;
+    grid-template-columns:150px 150px;
+    grid-gap: 25px;
+    /* margin */
+
+}
+
+#red {
+    background-color: #CF291D;
+}
+
+#light_gray {
+    background-color:#ECECEC;
+}
+
+#dark_gray {
+    background-color:#A1A1A1;
+}
+#white {
+    background-color: #FFFFFF;
+}
+
+
+
+
+
+
+}
+
+
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Saira Stencil One', cursive;
+
+font-family: 'Orbitron', sans-serif;
+font-family: 'Raleway', sans-serif; */
