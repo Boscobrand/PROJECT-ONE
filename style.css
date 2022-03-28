@@ -85,10 +85,12 @@ h1 {
 }
 
 #panel {
-    
- 
+    color: #ca9f10
 }
 
+#time {
+    font-family: 'Orbitron', sans-serif;
+}
 
 
 
