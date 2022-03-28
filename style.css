@@ -60,7 +60,8 @@ h1 {
     background-color:#A2A2A2;
 }
 #color {
-    background-color: #ca9f10;
+    background-color: #51D324
+    /* background-color: #ca9f10; */
 }
 
 #defuse {
@@ -74,28 +75,79 @@ h1 {
     display:grid;
     position:absolute;
     background-color: black;
-    max-width: 300px;
-    min-width:300px;
+    max-width:310px;
+    min-width:310px;
     max-height:150px;
     min-height:150px;
     border-radius: 15px;
     box-shadow: 0px 10px 5px #ACACAA;
-    margin-right: 400px;
+    margin-right: 410px;
     margin-top: 150px;
 }
 
 #panel {
-    color: #ca9f10
+    position:relative;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    color:#51D324;
+    padding: 5px;
+    max-width:307px;
+    min-width:307px;
+    max-height:100px;
+    min-height:100px;
+    border-radius: 15px;
+    margin-right: 300px;
+    margin-top: 25px;
+
 }
 
 #time {
     font-family: 'Orbitron', sans-serif;
+    color:#51D324;
 }
 
+.sequence_set {
+    display:grid;
+    position:absolute;
+    background-color: black;
+    max-width: 310px;
+    min-width:310px;
+    max-height: 235px;
+    min-height: 235px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 5px #ACACAA;
+    margin-right: 410px;
+    margin-top: 412px;
+}
 
+.screentag {
+    font-family: 'Orbitron', sans-serif;
+    color:#51D324;
+}
 
+.goal {
+    /* background-color: #ECECEC; */
+    position:absolute;
+    max-width:250px;
+    min-width:250px;
+    max-height:100px;
+    min-height:100px;
+    border-radius: 15px;
+    margin-right: 100px;
+    margin-top: 25px;
+}
 
-
+.count {
+   /* background-color: #ECECEC; */
+   position:absolute;
+   max-width:250px;
+   min-width:250px;
+   max-height:100px;
+   min-height:100px;
+   border-radius: 15px;
+   margin-right: 100px;
+   margin-top: 25px;
+}
 
 
 /* font-family: 'Raleway', sans-serif;
