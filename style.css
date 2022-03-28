@@ -11,7 +11,7 @@ h1 {
 
 .base_plate {
     position: absolute;
-    background-color: slategray;
+    background-color: slategray;   
     max-width: 800px;
     min-width:800px;
     max-height:600px;
@@ -181,3 +181,13 @@ font-family: 'Saira Stencil One', cursive;
 
 font-family: 'Orbitron', sans-serif;
 font-family: 'Raleway', sans-serif; */
+
+/* metallic silver for baseplate:
+background-color:
+linear-gradient(
+90deg, #787878 0%,
+        #b5b5b5 25%,
+        #e3e3e3 50%,
+        #b5b5b5 75%,
+        #787878 100%
+);  */
