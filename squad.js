@@ -1,13 +1,14 @@
 //Set up arrays to collect data patterns
 
-let simonarray = []
-let playerarray = []
+let simonArray = []
+let playerArray = []
 
 //start of game
 const startgame = document.querySelector('#defuse')
 startgame.addEventListener('click',tbd)
 
 //game pattern generator(TBD)
+let levelCount=0
 
 
 

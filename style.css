@@ -52,6 +52,21 @@ h1 {
     background-color: #b31828;
     box-shadow: 0px 10px 1px #6b0303;
     border-radius: 15px;
+    transition:0:15s;
+}
+
+#red:hover,
+#red:focus {
+    background-color:#d42335;
+    box-shadow: 0px 10px 1px #c00404;
+    border-radius: 15px;
+}
+
+#red:active,
+#red.pressed {
+    box-shadow: 0px 5px 1px #c00404;
+    background-color:#f7253a;
+    border-radius: 15px;
 }
 
 #white {
@@ -59,19 +74,63 @@ h1 {
     box-shadow: 0px 10px 1px #c4c1c1;
     border-radius:15px;
 }
+#white:hover,
+#white:focus {
+    background-color:#ca9f10;
+    box-shadow: 0px 10px 1px #8b6d0a;
+    border-radius: 15px;
+}
+#white:active,
+#white.pressed {
+    box-shadow: 0px 5px 1px #eee1e1;
+    background-color: #f8f6f6;
+    border-radius: 15px;
+}
 
 #dark_gray {
-    background-color:#A2A2A2;
-    box-shadow: 0px 10px 1px #635f5f;
+    background-color:#a6abaf;
+    box-shadow: 0px 10px 1px #837e7e;
     border-radius:15px;
-
 }
+#dark_gray:hover,
+#dark_gray:focus {
+    background-color:#dca5f1;
+    box-shadow: 0px 10px 1px #aaa4a4;
+    border-radius: 15px;
+}
+#dark_gray:active,
+#dark_gray.pressed {
+    box-shadow: 0px 5px 1px #eeecec;
+    background-color: #d6cfcf;
+    border-radius: 15px;
+}
+
 #green {
     background-color: #51D324;
     box-shadow: 0px 10px 1px #168331;
     border-radius:15px;
-    /* background-color: #ca9f10; */
+    /* alt background-color: #ca9f10; */
 }
+
+#green:hover,
+#green:focus {
+    background-color:#82e661;
+    box-shadow: 0px 10px 1px #42af5d;
+    border-radius: 15px;
+}
+#green:active,
+#green.pressed {
+    box-shadow: 0px 5px 1px #8ecc7a;
+    background-color: #a7f0b9;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
 
 #defuse {
     position:relative;
