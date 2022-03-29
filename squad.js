@@ -4,16 +4,23 @@ let simonArray = []
 let playerArray = []
 
 //start of game
-const startgame = document.querySelector('#defuse')
-startgame.addEventListener('click',tbd)
+const startSimon = document.querySelector('#defuse')
+startSimon.addEventListener('click',tbd)
+
+function beginGame() {
+    deliver.command = "Remember this sequence!";
+}
 
 //game pattern generator(TBD)
 let levelCount=0
 
+function advanceRound() {
+    level +=1;
+    const advSimonArray =[...SimonArray];
+}
 
 
-
-//tile activation & animation
+//tile activation
 
 
 

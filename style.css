@@ -70,38 +70,38 @@ h1 {
 }
 
 #white {
-    background-color:#ECECEC;
-    box-shadow: 0px 10px 1px #c4c1c1;
+    background-color:#f8f5f5e0;
+    box-shadow: 0px 10px 1px #a5a4a3cb;
     border-radius:15px;
 }
 #white:hover,
 #white:focus {
-    background-color:#ca9f10;
-    box-shadow: 0px 10px 1px #8b6d0a;
+    background-color:#fdfcfae8;
+    box-shadow: 0px 10px 1px #c4c1c1;
     border-radius: 15px;
 }
 #white:active,
 #white.pressed {
-    box-shadow: 0px 5px 1px #eee1e1;
+    box-shadow: 0px 5px 1px #cfcdcd;
     background-color: #f8f6f6;
     border-radius: 15px;
 }
 
 #dark_gray {
-    background-color:#a6abaf;
-    box-shadow: 0px 10px 1px #837e7e;
+    background-color:#71797E;
+    box-shadow: 0px 10px 1px #524e4e;
     border-radius:15px;
 }
 #dark_gray:hover,
 #dark_gray:focus {
-    background-color:#dca5f1;
-    box-shadow: 0px 10px 1px #aaa4a4;
+    background-color:#a5b2b9;
+    box-shadow: 0px 10px 1px #8d8787;
     border-radius: 15px;
 }
 #dark_gray:active,
 #dark_gray.pressed {
-    box-shadow: 0px 5px 1px #eeecec;
-    background-color: #d6cfcf;
+    box-shadow: 0px 5px 1px #cfe0e9;
+    background-color: #c2bbbb;
     border-radius: 15px;
 }
 
