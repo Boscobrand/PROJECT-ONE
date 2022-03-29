@@ -1,0 +1,2 @@
+let simonarray = []
+let playerarray = []
