@@ -4,7 +4,9 @@ let simonArray = [];
 
 
 //instantiate key variables
-const start = document.querySelector('.defuse');
+const start = document.getElementById('defuse');
+console.log(start)
+
 //const text = document.querySelector('text')
 const readout = document.querySelector('.readout1');
 const readout2 = document.querySelector('.readout2');
@@ -22,7 +24,7 @@ function reset(text) {
 
 //
 function playerTurn(levelCount){
-    readout.textContent = `YOUR TURN:$(levelCount) Entries$(levelCount>1?'s':")`;
+    readout.textContent = "YOUR TURN: $(levelCount) Entries$(levelCount>1?'s':");
 }
 
 //touchpad activation
