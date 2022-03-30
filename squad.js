@@ -22,7 +22,7 @@ function reset(text) {
 
 //
 function playerTurn(levelCount){
-    readout.textContent = `YOUR TURN:$(levelCount) Tap$(levelCount>1?'s':")`;
+    readout.textContent = `YOUR TURN:$(levelCount) Entries$(levelCount>1?'s':")`;
 }
 
 //touchpad activation
@@ -75,12 +75,33 @@ function advanceRound() {
 function captureClick(touchpad) {
     const index = playerArray.push(touchpad)-1;
     //signalplay
+    
+    const remaining = simonArray.length - playerArray.length;
+
+    if(playerArray[index] !== simonArray[index]) {
+        //play exploding gif
+        reset('TICK...TICK...BOOM! GAME OVER!');
+        return;
+    }
+
+    if(playerArray.length === simonArray.length) {
+        if (playerArray.length === 14);
+        //play applause gif
+        reset('TICK...TICK...CLICK! NICE WORK, BOMB DEFUSED!');
+        return
+    }
+
+    playerArray = [];
+    readout.textContent = "GOOD, STAY FOCUSED!";
+    setTimeout(() => {
+        advanceRound();
+    }, 1000);
+    return;
 }
 
-
-
-readout2.textContent = `GO! ${remainingTaps} Tap${
-    remainingTaps>1?'s':"
+readout2.textContent = `GO! ${remaining} Entries${
+    remaining>1 ? 's' : ''
+    }`;
 }
 
 function begin() {
@@ -91,6 +112,6 @@ function begin() {
 startSimon.addEventListener('click', begin);
 touchpad_set.addEventListener('click',event => {
     const[touchpad] = event.target.touchdata;
-    if (tile) captureClick(tile);
+    if (tile) captureClick( //xxxx );
 
 });
