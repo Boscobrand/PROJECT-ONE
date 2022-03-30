@@ -1,15 +1,15 @@
 //Set up arrays to collect data patterns
-let playerArray = []
-let simonArray = []
+let playerArray = [];
+let simonArray = [];
 
 
 //instantiate key variables
-const startSimon = document.querySelector('#defuse')
+const start = document.querySelector('.defuse');
 //const text = document.querySelector('text')
-const readout = document.querySelector('readout1')
-const readout2 = document.querySelector('readout2')
+const readout = document.querySelector('.readout1');
+const readout2 = document.querySelector('.readout2');
 
-let levelCount=0
+let levelCount = 0;
 
 function reset(text) {
     alert(text);
@@ -45,14 +45,14 @@ function play(advSimonArray) {
             touchpadAction(colorcode);
         }, (index + 1) * 600);
     });
-};
+}
 
 function sequenceGenerator() {
-    const touchdata = ['red1','wht1','gra1','grn1']
-    const generate = touchdata[Math.floor(Math.random() * touchdata.length)]
+    const touchdata = ['red1','white1','gray1','green1'];
+    const generate = touchdata[Math.floor(Math.random() * touchdata.length)];
     //Multiplying touchdata.length and Math.random creates a range between 1-4 instead of floats between 0-1. Math floor rounds fractional numbers down to whole numbers (0-3) 
     //referenced: https://discuss.codecademy.com/t/how-do-math-random-and-math-floor-work-together/490890
-    return random;
+    return generate;
 }
 
 function advanceRound() {
@@ -66,7 +66,7 @@ function advanceRound() {
     advSimonArray.push(advanceRound());
     play(advSimonArray);
 
-    simonArray = [...advSimonArray]
+    simonArray = [...advSimonArray];
     setTimeout(() =>{
         playerTurn(levelCount);
     }, levelCount * 600 + 1000);
@@ -88,7 +88,7 @@ function captureClick(touchpad) {
         if (playerArray.length === 14);
         //play applause gif
         reset('TICK...TICK...CLICK! NICE WORK, BOMB DEFUSED!');
-        return
+        return;
     }
 
     playerArray = [];
@@ -97,21 +97,22 @@ function captureClick(touchpad) {
         advanceRound();
     }, 1000);
     return;
+
+    readout2.textContent = `GO! ${remaining} Entries${
+        remaining >1 ? 's' : ''
+        }`;
 }
 
-readout2.textContent = `GO! ${remaining} Entries${
-    remaining>1 ? 's' : ''
-    }`;
-}
+
 
 function begin() {
-    deliver.readout = "REMEMBER THIS SEQUENCE";
-    nextRound();
+    readout = "REMEMBER THIS SEQUENCE";
+    advanceRound();
 }
 
-startSimon.addEventListener('click', begin);
+start.addEventListener('click', begin, false);
+
 touchpad_set.addEventListener('click',event => {
     const[touchpad] = event.target.touchdata;
-    if (tile) captureClick( //xxxx );
-
+    //if (tile) captureClick( //xxxx );
 });
