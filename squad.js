@@ -1,11 +1,11 @@
 //Set up arrays to collect data patterns
-
-let simonArray = []
 let playerArray = []
+let simonArray = []
 
-//start of game
+
+//instantiate key variables
 const startSimon = document.querySelector('#defuse')
-//const info = document.querySelector('js-info')
+//const text = document.querySelector('text')
 const readout = document.querySelector('readout1')
 const readout2 = document.querySelector('readout2')
 
