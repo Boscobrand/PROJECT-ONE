@@ -27,8 +27,8 @@ function playerTurn(levelCount){
 
 //touchpad activation
 function touchpadAction(color) {
-    const touched = document.querySelector(`[data-touch='${color}']`);
-    const sfx = document.querySelector(`[data-sfx = '${color}']`);
+    const touched = document.getElementsByName(`[data-touch='${color}']`);
+    const sfx = document.getElementsByName(`[data-sfx = '${color}']`);
 
     touched.classList.add('pressed');
     sfx.play();
@@ -114,6 +114,9 @@ function begin() {
 start.addEventListener('click', begin);
 
 touchpad_set.addEventListener('click', event => {
-    const[touchpad] = event.target.dataset;
+    const {
+        touchpad
+    } = event.target.dataset;
+
     if (touchpad) capture(touchpad);
 });
