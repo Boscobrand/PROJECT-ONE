@@ -4,7 +4,6 @@ let playerArray = [];
 
 //setup
 const start = document.getElementById('defuse');
-//const text = document.querySelector('text')
 const readout = document.querySelector('.readout1');
 const readout2 = document.querySelector('.readout2');
 const touchpad_set=document.querySelector('.touchpad_set');
@@ -25,16 +24,21 @@ function playerTurn(levelCount){
     readout.textContent = `YOUR TURN: ${levelCount} Entries${levelCount > 1 ? 's': ''}`;
 }
 
-//touchpad activation
-function touchpadAction(color) {
-    const touched = document.getElementsByName(`[data-touch='${color}']`);
-    const sfx = document.getElementsByName(`[data-sfx = '${color}']`);
 
-    touched.classList.add('pressed');
-    sfx.play();
+//touchpad activation
+
+
+function touchpadAction(color) {
+    const dataTouchpad= document.getElementsByName(`[data-touchpad='${color}']`);
+    //const sfx = document.getElementsByName(`[data-sfx = '${color}']`);
+    console.log(dataTouchpad)
+    console.log(typeof dataTouchpad)
+
+    dataTouchpad.classList.add('activated');
+    // sfx.play();
 
     setTimeout(() => {
-        touched.classList.remove('pressed');
+        dataTouchpad.classList.remove('activated');
     }, 350);
 }
 
@@ -48,7 +52,7 @@ function play(advcomputerArray) {
 }
 
 function sequenceGenerator() {
-    const touchpads = ['red1','white1','gray1','green1'];
+    const touchpads = ['red','white','gray','green'];
     const generate = touchpads[Math.floor(Math.random() * touchpads.length)];
     //Multiplying data-touch.length and Math.random creates a range between 1-4 instead of floats between 0-1. Math floor rounds fractional numbers down to whole numbers (0-3) 
     //referenced: https://discuss.codecademy.com/t/how-do-math-random-and-math-floor-work-together/490890
@@ -104,7 +108,6 @@ function capture(touchpad) {
         remainingEntries >1 ? 's' : ''
     }`;
 
-    
 
 function begin() {
     readout.textContext = "REMEMBER THIS SEQUENCE";
