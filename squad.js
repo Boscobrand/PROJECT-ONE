@@ -28,10 +28,10 @@ function playerTurn(levelCount){
 //touchpad activation
 function touchpadAction(color) {
     
-    const dataTouchpadA = [document.getElementsByName('#data-touchpad')]
-    console.log(dataTouchpadA)
+    const dataTouchpad = document.querySelector('.touchpad')
+    // console.log(dataTouchpadA)
     
-    const dataTouchpad= document.getElementsByName(`[data-touchpad='${color}']`);
+    // const dataTouchpad= document.getElementsByName(`[data-touchpad='${color}']`);
     //const sfx = document.getElementsByName(`[data-sfx = '${color}']`);
     console.log(dataTouchpad)
 
@@ -99,7 +99,7 @@ function capture(touchpad) {
         return;
     }
 
-    playerArray = [];
+    // playerArray = [];
     readout.textContent = "GOOD, STAY FOCUSED!";
     setTimeout(() => {
         advanceRound();
