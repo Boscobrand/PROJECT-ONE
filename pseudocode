@@ -57,6 +57,14 @@ what was the goal of this step?
 - it was also supposed to access the sound file corresponding to the color
 - it would then move through classList to engage the CSS
 - then move on to the play function to iterate over the array
-
 - 
 
+- Alt 1: break apart button functionality
+    - document.querySelector("#green").addEventListener(click, function(e) {
+        playerArr.push("green");
+        audio().play()
+        check(simonArr,playerArr)
+    })
+    - need to see where the function(e) is...
+
+- We would be inserting this below the game reset and start of the player turn (including the textContext that generates the level count)...AND...the play function that plays the next round by activating the tiles in the right order, taking the computer's updated sequence array then iterating over it

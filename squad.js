@@ -34,22 +34,7 @@ function playerTurn(levelCount){
 // white_touchpad = document.qetElementsById('#white').addEventListener('click', function(X)):
 // gray_touchpad = document.getElementsById('#gray').addEventListener('click', function(X)):
 // green_touchpad = document.getElementsById('#green').addEventListener('click', function(X)):
-
-function 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//function 
 
 
 //OLD FORMAAT
@@ -58,23 +43,23 @@ function
 // const dataTouchpad= document.getElementsByName('#data-touchpad');
 // console.log(dataTouchpad)
 
-  // const touchpad = document.querySelector(`['data-color='${data-color}']`)
-    // console.log(touchpad)
+//   const dataTouchpad = document.querySelector(`['data-color='${ }']`)
+  const dataTouchpad = document.querySelector("touchpad_set")
+    console.log(touchpad)
 
 
+function touchpadAction() {
 
-// function touchpadAction() {
+    // const touchpad_red = document.getElementsByName(`[data-color='${"#red"}']`);
+    //const sfx_red = document.querySelector((`[data-sfx='${"#red"}']`););
+    console.log(dataTouchpad)
 
-//     const touchpad_red = document.getElementsByName(`[data-color='${"#red"}']`);
-//     //const sfx_red = document.querySelector((`[data-sfx='${"#red"}']`););
-//     console.log(touchpad_red)
+    dataTouchpad.classList.add('activated');
+    // sfx.play();
 
-//     touchpad_red.classList.add('activated');
-//     // sfx.play();
-
-//     setTimeout(() => {
-//         touchpad_red.classList.remove('activated');
-//     }, 350);
+    setTimeout(() => {
+        dataTouchpad.classList.remove('activated');
+    }, 350);
 }
 
 //This function will iterate over the advcomputerArray, and stall the iteration so all values arent called at once, turning on all touchpads at the same tine.
