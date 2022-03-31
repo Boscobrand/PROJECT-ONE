@@ -29,6 +29,7 @@ function playerTurn(levelCount){
 function touchpadAction(color) {
     
     const dataTouchpad = document.querySelector('.touchpad')
+    
     // console.log(dataTouchpadA)
     
     // const dataTouchpad= document.getElementsByName(`[data-touchpad='${color}']`);
