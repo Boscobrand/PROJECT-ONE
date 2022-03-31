@@ -26,9 +26,9 @@ function playerTurn(levelCount){
 }
 
 //touchpad activation
-function touchpadAction(colorcode) {
-    const touched = document.querySelector(`[touchdata='${colorcode}']`);
-    //const signal = document.querySelector(`[touchsignal = '${colorcode}']`);
+function touchpadAction(touchdata) {
+    const touched = document.querySelector(`[touchdata='${touchdata}']`);
+    //const signal = document.querySelector(`[touchsignal = '${touchdata}']`);
 
     touched.classList.add('pressed');
     //signal.play();
@@ -40,9 +40,9 @@ function touchpadAction(colorcode) {
 
 //This function will iterate over the advSimonArray, and stall the iteration so all values arent called at once, turning on all touchpads at the same tine.
 function play(advSimonArray) {
-    advSimonArray.forEach((colorcode,index) => {
+    advSimonArray.forEach((touchdata,index) => {
         setTimeout(() => {
-            touchpadAction(colorcode);
+            touchpadAction(touchdata);
         }, (index + 1) * 600);
     });
 }
@@ -63,7 +63,7 @@ function advanceRound() {
 
     const advSimonArray =[...simonArray];
     //spread operator: p.196 8.3.4 O'Reilly Javascript The Definitive Guide 7th Ed, by David Flanagan
-    advSimonArray.push(advanceRound());
+    advSimonArray.push(sequenceGenerator));
     play(advSimonArray);
 
     simonArray = [...advSimonArray];
@@ -72,7 +72,7 @@ function advanceRound() {
     }, levelCount * 600 + 1000);
 }
 
-function captureClick(touchpad) {
+function capture(touchpad) {
     const index = playerArray.push(touchpad)-1;
     //signalplay
     
@@ -112,7 +112,7 @@ function begin() {
 
 start.addEventListener('click', begin);
 
-touchpad_set.addEventListener('click',event => {
+touchpad.addEventListener('click',event => {
     const[touchpad] = event.target.touchdata;
-    //if (tile) captureClick( //xxxx );
+    //if (xxx) capture( //xxxx );
 });
