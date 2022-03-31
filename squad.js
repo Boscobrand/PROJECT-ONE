@@ -16,32 +16,65 @@ function reset(text) {
     playerArray=[];
     levelCount = 0;
     readout.textContent = "PRESS DEFUSE TO BEGIN";
-    //note 2
+    readout.classList.add('hidden');
+    touchpad_set.classList.add('unclickable')
 }
 
 //note 2.5
 function playerTurn(levelCount){
+    touchpad_set.classList.remove('unclickable');
     readout.textContent = `YOUR TURN: ${levelCount} Entries${levelCount > 1 ? 's': ''}`;
 }
 
-
 //touchpad activation
-function touchpadAction(color) {
-    
-    const dataTouchpadA = [document.getElementsByName('#data-touchpad')]
-    console.log(dataTouchpadA)
-    
-    const dataTouchpad= document.getElementsByName(`[data-touchpad='${color}']`);
-    //const sfx = document.getElementsByName(`[data-sfx = '${color}']`);
-    console.log(dataTouchpad)
 
-    dataTouchpad.classList.add('activated');
-    // sfx.play();
- 
+//NEW FORMAT -------------------------------
 
-    setTimeout(() => {
-        dataTouchpad.classList.remove('activated');
-    }, 350);
+// red_touchpad = document.getElementsById('#red').addEventListener('click', function(X));
+// white_touchpad = document.qetElementsById('#white').addEventListener('click', function(X)):
+// gray_touchpad = document.getElementsById('#gray').addEventListener('click', function(X)):
+// green_touchpad = document.getElementsById('#green').addEventListener('click', function(X)):
+
+function 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//OLD FORMAAT
+//----------------------------------------------------
+
+// const dataTouchpad= document.getElementsByName('#data-touchpad');
+// console.log(dataTouchpad)
+
+  // const touchpad = document.querySelector(`['data-color='${data-color}']`)
+    // console.log(touchpad)
+
+
+
+// function touchpadAction() {
+
+//     const touchpad_red = document.getElementsByName(`[data-color='${"#red"}']`);
+//     //const sfx_red = document.querySelector((`[data-sfx='${"#red"}']`););
+//     console.log(touchpad_red)
+
+//     touchpad_red.classList.add('activated');
+//     // sfx.play();
+
+//     setTimeout(() => {
+//         touchpad_red.classList.remove('activated');
+//     }, 350);
 }
 
 //This function will iterate over the advcomputerArray, and stall the iteration so all values arent called at once, turning on all touchpads at the same tine.
@@ -112,6 +145,8 @@ function capture(touchpad) {
 
 
 function begin() {
+    start.classList.add('hidden')
+    readout.classList.remove('hidden')
     readout.textContext = "REMEMBER THIS SEQUENCE";
     advanceRound();
 }
@@ -125,3 +160,27 @@ touchpad_set.addEventListener('click', event => {
 
     if (touchpad) capture(touchpad);
 });
+
+
+
+
+
+
+
+
+
+//CODE GRAVEYARD
+//----------------------------
+ 
+//  let touchBucket = [];
+    //  $("touchpad #data-color").each(function() {
+    //      newBucket = [];
+    //      actualColors= $(this).find('data-color');
+    //      if (actualColors.length >0) {
+    //          actualColors.each(function() {
+    //              newBucket.push($(this).text());
+    //          });
+    //          touchBucket.push(newBucket);
+    //      }
+    //  });
+    //  console.log(touchBucket);

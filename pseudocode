@@ -42,3 +42,21 @@ GOLD (Stretch goals)
 
 Modal
 GIF Api of explosions
+
+
+
+____________________________
+
+revisiting touchpad activation
+
+what was the goal of this step?
+
+- switch the css to activated (classList.add and remove)
+- turn on brighter color and eventually sound file
+- the function was supposed to access the HTML data-color element and return the tile color
+- it was also supposed to access the sound file corresponding to the color
+- it would then move through classList to engage the CSS
+- then move on to the play function to iterate over the array
+
+- 
+
