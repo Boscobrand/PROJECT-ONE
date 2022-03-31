@@ -4,7 +4,7 @@ let playerArray = [];
 
 //setup
 const start = document.getElementById('defuse');
-const readout = document.querySelector('.readout1');
+const readout = document.querySelector('.readout');
 const readout2 = document.querySelector('.readout2');
 const touchpad_set=document.querySelector('.touchpad_set');
 
@@ -26,16 +26,18 @@ function playerTurn(levelCount){
 
 
 //touchpad activation
-
-
 function touchpadAction(color) {
+    
+    const dataTouchpadA = [document.getElementsByName('#data-touchpad')]
+    console.log(dataTouchpadA)
+    
     const dataTouchpad= document.getElementsByName(`[data-touchpad='${color}']`);
     //const sfx = document.getElementsByName(`[data-sfx = '${color}']`);
     console.log(dataTouchpad)
-    console.log(typeof dataTouchpad)
 
     dataTouchpad.classList.add('activated');
     // sfx.play();
+ 
 
     setTimeout(() => {
         dataTouchpad.classList.remove('activated');
@@ -81,8 +83,8 @@ const remainingEntries = computerArray.length - playerArray.length;
 
 function capture(touchpad) {
     const index = playerArray.push(touchpad)-1;
-    const sfx = document.querySelector(`[data-sfx='${touchpad}']`);
-    sfx.play()
+    //const sfx = document.querySelector(`[data-sfx='${touchpad}']`);
+   // sfx.play()
     
     if(playerArray[index] !== computerArray[index]) {
         //play exploding gif
