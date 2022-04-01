@@ -27,20 +27,22 @@ function reset(text) {
 //note 2.5
 function playerTurn(levelCount){
     touchpad_set.classList.remove('unclickable');
-    readout.textContent = `YOUR TURN: ${levelCount} ENTRIES${levelCount > 1 ? 's': ''}`;
+    readout.textContent = `YOUR TURN: ${levelCount} ENTRIES${levelCount > 1 ? '': ''}`;
 }
 
 //touchpad activation
-function touchpadAction() {
+function touchpadAction(color) {
     //const dataTouchpad = document.querySelector(`[data-touchpad='${'#id'}']`);
-    const dataTouchpad = document.querySelector('.touchpad');
-    //const sound = document.querySelector('.hidden');
+    const dataTouchpad = document.getElementById(color)
+    //const dataTouchpad = document.querySelector('.touchpad');
+    const sound = document.querySelector('.hidden');
     // const dataTouchpad= document.getElementsByName(`[data-touchpad='${color}']`);
     //console.log(dataTouchpad)
+
     
     dataTouchpad.classList.add('activated');
-    //sound.play();
- console.log(dataTouchpad.classList)
+    sound.play();
+ // console.log(dataTouchpad.classList)
 
 
     setTimeout(() => {
@@ -69,7 +71,6 @@ function sequenceGenerator() {
 }
 
 
-
 function advanceRound() {
     levelCount +=1;
 
@@ -78,7 +79,7 @@ function advanceRound() {
 
     
     //spread operator: p.196 8.3.4 O'Reilly Javascript The Definitive Guide 7th Ed, by David Flanagan
-    advcomputerArray.push(sequenceGenerator);
+    advcomputerArray.push(sequenceGenerator());
     //console.log(advcomputerArray);
     playNext(advcomputerArray);
 
@@ -89,13 +90,12 @@ function advanceRound() {
 }
 
 
-
 function capture(touchpad) {
     const index = playerArray.push(touchpad) -1;
     //console.log(index)
 
     const sound = document.querySelector(`[data-sfx='${touchpad}']`);
-    //sound.play();
+    sound.play();
 
     const remaining = computerArray.length - playerArray.length;
     //console.log
@@ -124,7 +124,7 @@ function capture(touchpad) {
     //return;
 
     readout2.textContent = `GO! ${remaining} Entries${
-        remaining >1 ? 's' : ''
+        remaining >1 ? '' : ''
     }`;
 
 }
