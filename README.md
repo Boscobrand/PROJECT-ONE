@@ -16,7 +16,7 @@ For this first project, we were presented with the opportunity to create a game 
 
 ## **OVERVIEW**
 
-- Concept
+- [Concept](game-concept)
 - Development
 - User Stories
 - Project Management
