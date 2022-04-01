@@ -117,6 +117,3 @@ Once the project was approved internally, the game was created using HTML, CSS, 
  - You will be alerted if you save the day or...not.
 
 **Good luck! We are all depending on you!**
-
-
-https://giphy.com/clips/DefyTVNetwork-magic-criss-angel-mindfreak-4ndd63s5toTkJ2rSQl
