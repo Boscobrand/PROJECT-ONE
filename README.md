@@ -2,7 +2,7 @@
 
 ## **BACKGROUND**
 
-For this first project, we were presented with the opportunity to create a game that would be deployed through our personal GitHub.  We were provided with several options including Flash Cards, Trivia, Spaceman, Tower of Hanoi or Simon.  My selection was to develop a game similar to Simon, the popular game from the 1980's based on pattern recognition, but from a different perspective.
+For this first project, we were presented with the opportunity to create a game that would be deployed through our personal GitHub.  We were provided with several options including Flash Cards, Trivia, Spaceman, Tower of Hanoi or Simon.  Our challenge was to develop, build, and deliver the game at the end of a FIVE DAY SPRINT.  My selection was to develop a game similar to Simon, the popular game from the 1980's based on pattern recognition, but from a different perspective.
 
 <img width="1042" alt="BOMB SQUAD" src="https://user-images.githubusercontent.com/57998649/161198883-4c2d9393-be4f-4ecf-abf8-8baf02388c03.png">
 
@@ -13,9 +13,21 @@ For this first project, we were presented with the opportunity to create a game 
 
 *For game installation and instructions, please scroll to the bottom of this page*
 
-The concept of Bomb Squad was to increase a level of tension delivered by a normal Simon game, which typically rises at a steady rate.  This game is for players who enjoy a sequencing challenge under pressure (think Simon meets Perfection).  Bomb Squad adds to the experience by asking the player to dismantle a bomb by entering code sequences and matching 15 electronic touchpad patterns in a row, within a rapidly decreasing time limit.  The sounds were chosen to be a little less musical and a little more stress inducing.  Player progress is tracked in a Sequence Status display, all while a countdown clock ticks away to add even more of a challenge to the task.  The game applauds you if you disarm the bomb, and mourns you if you do not.
 
-## **BOMB SQUAD: DEVELOPMENT**
+**OVERVIEW**
+
+- Concept
+- Development
+- User Stories
+- Project Management
+- Current Status/Next Steps
+- Game Installation and Instructions
+
+## **GAME CONCEPT**
+
+The concept of Bomb Squad was to increase a level of tension delivered by a normal Simon game, which typically rises at a steady rate.  This game is for players who enjoy a sequencing challenge under pressure (think Simon meets Perfection).  Bomb Squad adds to the experience by asking the player to dismantle a bomb by entering code sequences and matching 15 electronic touchpad patterns in a row, within a rapidly decreasing time limit.  The sounds were chosen to be a little less musical and a little more distracting.  Player progress is tracked in a Sequence Status display, all while a countdown clock ticks away to add even more of a challenge to the task.  The game applauds you if you disarm the bomb, and mourns you if you do not.
+
+## **DEVELOPMENT**
 
  - The process started with an initial proposal, including the development of user stories to connect with the needs of a player who may be interested in playing this game.  A wireframe of the proposed user interface was also developed.
 
@@ -107,10 +119,4 @@ Once the project was approved internally, the game was created using HTML, CSS, 
 **Good luck! We are all depending on you!**
 
 
-
-
-
-
-
-
-
+<div style="width:480px"><iframe allow="fullscreen" frameBorder="0" height="360" src="https://giphy.com/embed/4ndd63s5toTkJ2rSQl/video" width="480"></iframe></div>
