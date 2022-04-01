@@ -15,7 +15,7 @@ function reset(text) {
     computerArray=[];
     playerArray=[];
     levelCount = 0;
-    start.classList.remove('hidden')
+    start.classList.remove('hidden');
     readout.textContent = "PRESS DEFUSE TO BEGIN";
     readout.classList.add('hidden');
     touchpad_set.classList.add('unclickable');
@@ -24,18 +24,18 @@ function reset(text) {
 //note 2.5
 function playerTurn(levelCount){
     touchpad_set.classList.remove('unclickable');
-    readout.textContent = `YOUR TURN: ${levelCount} Entries${levelCount > 1 ? 's': ''}`;
+    readout.textContent = `YOUR TURN: ${levelCount} ENTRIES${levelCount > 1 ? 's': ''}`;
 }
 
 
 //touchpad activation
-function touchpadAction(color) {
-    const dataTouchpad = document.querySelector('.touchpad')
+function touchpadAction() {
+    const dataTouchpad = document.querySelector('.touchpad');
     const sound = document.querySelector('.hidden');
     // const dataTouchpad= document.getElementsByName(`[data-touchpad='${color}']`);
     //console.log(dataTouchpad)
     dataTouchpad.classList.add('activated');
-    sound.play()
+    sound.play();
  
     setTimeout(() => {
         dataTouchpad.classList.remove('activated');
@@ -81,13 +81,13 @@ function advanceRound() {
 
 function capture(touchpad) {
     const index = playerArray.push(touchpad) -1;
-    console.log(index)
+    //console.log(index)
 
     const sound = document.querySelector(`[data-sfx='${touchpad}']`);
-    sound.play()
+    sound.play();
 
     const remaining = computerArray.length - playerArray.length;
-    console.log
+    //console.log
     
     if(playerArray[index] !== computerArray[index]) {
         //play exploding gif
@@ -102,7 +102,7 @@ function capture(touchpad) {
         return;
     }
 
-    // playerArray = [];
+    //playerArray = [];
     readout.textContent = "GOOD, STAY FOCUSED!";
     setTimeout(() => {
         advanceRound();
@@ -135,15 +135,15 @@ touchpad_set.addEventListener('click', event => {
 function startTimer(duration, display) {
     let timer = duration, minutes, seconds; //mills;
     setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10)
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
         //mills = parseInt(timer / 1000/60);
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
         //mills   = mills < 10   ? "0" + mills : mills;
 
-        display.textContent = minutes + ":" + seconds //+ ":" + mills;
+        display.textContent = minutes + ":" + seconds; //+ ":" + mills;
 
         if (--timer < 0) {
             timer = duration;
