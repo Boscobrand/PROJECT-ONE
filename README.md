@@ -20,7 +20,7 @@ For this first project, we were presented with the opportunity to create a game 
 - [Development](#developent)
 - [User Stories](#user-stories)
 - [Project Management](#project-management)
-- [Current Status/Next Steps](#current-status-next-steps)
+- [Current Status and Next Steps](#current-status-and-next-steps)
 - [Game Installation and Instructions](#game-installation-and-instructions)
 
 ## **GAME CONCEPT**
