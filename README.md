@@ -14,14 +14,14 @@ For this first project, we were presented with the opportunity to create a game 
 *For game installation and instructions, please scroll to the bottom of this page*
 
 
-## **OVERVIEW**
+## **CONTENTS**
 
 - [Concept](#game-concept)
-- Development
-- User Stories
-- Project Management
-- Current Status/Next Steps
-- Game Installation and Instructions
+- [Development](#developent)
+- [User Stories](#user-stories)
+- [Project Management](#project-management)
+- [Current Status/Next Steps](#current-status-next-steps)
+- [Game Installation and Instructions](#game-installation-and-instructions)
 
 ## **GAME CONCEPT**
 
