@@ -1,5 +1,15 @@
 # PROJECT ONE: BOMB SQUAD
 
+## **CONTENTS**
+
+- [Concept](#game-concept)
+- [Development](#developent)
+- [User Stories](#user-stories)
+- [Project Management](#project-management)
+- [Current Status and Next Steps](#current-status-and-next-steps)
+- [Game Installation and Instructions](#game-installation-and-instructions)
+
+
 ## **BACKGROUND**
 
 For this first project, we were presented with the opportunity to create a game that would be deployed through our personal GitHub.  We were provided with several options including Flash Cards, Trivia, Spaceman, Tower of Hanoi or Simon.  Our challenge was to develop, build, and deliver the game at the end of a FIVE DAY SPRINT.  My selection was to develop a game similar to Simon, the popular game from the 1980's based on pattern recognition, but from a different perspective.
@@ -14,14 +24,7 @@ For this first project, we were presented with the opportunity to create a game 
 *For game installation and instructions, please scroll to the bottom of this page*
 
 
-## **CONTENTS**
 
-- [Concept](#game-concept)
-- [Development](#developent)
-- [User Stories](#user-stories)
-- [Project Management](#project-management)
-- [Current Status and Next Steps](#current-status-and-next-steps)
-- [Game Installation and Instructions](#game-installation-and-instructions)
 
 ## **GAME CONCEPT**
 
