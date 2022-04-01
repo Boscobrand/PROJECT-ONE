@@ -119,4 +119,4 @@ Once the project was approved internally, the game was created using HTML, CSS, 
 **Good luck! We are all depending on you!**
 
 
-<div style="width:480px"><iframe allow="fullscreen" frameBorder="0" height="360" src="https://giphy.com/embed/4ndd63s5toTkJ2rSQl/video" width="480"></iframe></div>
+https://giphy.com/clips/DefyTVNetwork-magic-criss-angel-mindfreak-4ndd63s5toTkJ2rSQl
