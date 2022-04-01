@@ -16,11 +16,13 @@ function reset(text) {
     playerArray=[];
     levelCount = 0;
     readout.textContent = "PRESS DEFUSE TO BEGIN";
-    //note 2
+    readout.classList.add('hidden');
+    touchpad_set.classList.add('unclickable');
 }
 
 //note 2.5
 function playerTurn(levelCount){
+    touchpad_set.classList.remove('unclickable');
     readout.textContent = `YOUR TURN: ${levelCount} Entries${levelCount > 1 ? 's': ''}`;
 }
 
@@ -29,17 +31,12 @@ function playerTurn(levelCount){
 function touchpadAction(color) {
     
     const dataTouchpad = document.querySelector('.touchpad')
-    
-    // console.log(dataTouchpadA)
-    
+    const sound = document.querySelector('.hidden');
     // const dataTouchpad= document.getElementsByName(`[data-touchpad='${color}']`);
-    //const sfx = document.getElementsByName(`[data-sfx = '${color}']`);
-    console.log(dataTouchpad)
-
+    //console.log(dataTouchpad)
     dataTouchpad.classList.add('activated');
-    // sfx.play();
+    sound.play()
  
-
     setTimeout(() => {
         dataTouchpad.classList.remove('activated');
     }, 350);
@@ -80,14 +77,19 @@ function advanceRound() {
     }, levelCount * 550 + 1100);
 }
 
-const remainingEntries = computerArray.length - playerArray.length;
+
 
 function capture(touchpad) {
-    const index = playerArray.push(touchpad)-1;
-    //const sfx = document.querySelector(`[data-sfx='${touchpad}']`);
-   // sfx.play()
+    const index = playerArray.push(touchpad) -1;
+    console.log(index)
+
+    const sound = document.querySelector(`[data-sfx='${touchpad}']`);
+    sound.play()
+
+    const remaining = computerArray.length - playerArray.length;
     
     if(playerArray[index] !== computerArray[index]) {
+    // if(playerArray[index] !== computerArray[index]) {
         //play exploding gif
         reset('TICK...TICK...BOOM! GAME OVER!');
         return;
@@ -105,12 +107,13 @@ function capture(touchpad) {
     setTimeout(() => {
         advanceRound();
     }, 1100);
-    return;
-}
-    readout2.textContent = `GO! ${remainingEntries} Entries${
-        remainingEntries >1 ? 's' : ''
+    //return;
+
+    readout2.textContent = `GO! ${remaining} Entries${
+        remaining >1 ? 's' : ''
     }`;
 
+}
 
 function begin() {
     readout.textContext = "REMEMBER THIS SEQUENCE";
