@@ -36,9 +36,10 @@ The concept of Bomb Squad was to increase a level of tension delivered by a norm
 
 ## **BOMB SQUAD: PROJECT MANAGEMENT**
 
- - Project management tools were used throughout the development period. 
- - First, a timetable for the project was developed in a spreadsheet in order to have a clarity of goals, stretch goals, milestones, and above all to stay on pace.  
+Project management tools and techniques were used throughout the development period. 
+ - Aa timetable for the project was developed in order to maintain clarity of goals, stretch goals, milestones, and above all to stay on pace.  
  - Adjustments to the plan were made as necessary to stay on focus for delivering against first level MVP Goals agreed upon with the team, and then incorporating the higher silver, and gold level aspirations we had for the game to make the most effective use of our time.
+ - In addition GitHub Projects (Beta) was leveraged to manage day to day, and daily Stands helped to increase focus on the challenge at hand.
 
 
 *MVP Goals (Minimum Viable Product)*
@@ -63,6 +64,12 @@ The concept of Bomb Squad was to increase a level of tension delivered by a norm
 ****
 
 <img width="1137" alt="Screen Shot 2022-04-01 at 1 29 22 AM" src="https://user-images.githubusercontent.com/57998649/161200920-94caa0b4-9f56-4981-ab8f-b4aa6d1068e8.png">
+
+****
+
+<img width="1008" alt="Screen Shot 2022-04-01 at 12 03 26 AM" src="https://user-images.githubusercontent.com/57998649/161213506-49a98b78-543a-4d5a-836b-be6fef5c253f.png">
+
+
 
 
 Once the project was approved internally, the game was created using HTML, CSS, and JavaScript languages on a MacBook Air.  All three code files were separately validated and PDF files of their validation are included in the accompanying folder on this repo.
