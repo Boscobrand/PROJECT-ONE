@@ -14,7 +14,7 @@ For this first project, we were presented with the opportunity to create a game 
 *For game installation and instructions, please scroll to the bottom of this page*
 
 
-**OVERVIEW**
+## **OVERVIEW**
 
 - Concept
 - Development
@@ -46,7 +46,7 @@ The concept of Bomb Squad was to increase a level of tension delivered by a norm
 
 
 
-## **BOMB SQUAD: PROJECT MANAGEMENT**
+## **PROJECT MANAGEMENT**
 
 Project management tools and techniques were used throughout the development period. 
  - Aa timetable for the project was developed in order to maintain clarity of goals, stretch goals, milestones, and above all to stay on pace.  
