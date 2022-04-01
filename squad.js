@@ -15,6 +15,7 @@ function reset(text) {
     computerArray=[];
     playerArray=[];
     levelCount = 0;
+    start.classList.remove('hidden')
     readout.textContent = "PRESS DEFUSE TO BEGIN";
     readout.classList.add('hidden');
     touchpad_set.classList.add('unclickable');
@@ -29,7 +30,6 @@ function playerTurn(levelCount){
 
 //touchpad activation
 function touchpadAction(color) {
-    
     const dataTouchpad = document.querySelector('.touchpad')
     const sound = document.querySelector('.hidden');
     // const dataTouchpad= document.getElementsByName(`[data-touchpad='${color}']`);
@@ -87,9 +87,9 @@ function capture(touchpad) {
     sound.play()
 
     const remaining = computerArray.length - playerArray.length;
+    console.log
     
     if(playerArray[index] !== computerArray[index]) {
-    // if(playerArray[index] !== computerArray[index]) {
         //play exploding gif
         reset('TICK...TICK...BOOM! GAME OVER!');
         return;
@@ -129,3 +129,30 @@ touchpad_set.addEventListener('click', event => {
 
     if (touchpad) capture(touchpad);
 });
+
+
+//modified code from https://jsfiddle.net/wr1ua0db/17/
+function startTimer(duration, display) {
+    let timer = duration, minutes, seconds; //mills;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10)
+        //mills = parseInt(timer / 1000/60);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        //mills   = mills < 10   ? "0" + mills : mills;
+
+        display.textContent = minutes + ":" + seconds //+ ":" + mills;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+     const sevenMinutes = 60 * 7,
+        display = document.querySelector('#time');
+    startTimer(sevenMinutes, display);
+};
