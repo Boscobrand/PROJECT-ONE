@@ -1,6 +1,9 @@
 //Set up arrays to collect data patterns
 let computerArray = [];
 let playerArray = [];
+//shifted advcomputerArray here as global variable
+let advcomputerArray =[...computerArray];
+
 
 //setup
 const start = document.getElementById('defuse');
@@ -27,37 +30,45 @@ function playerTurn(levelCount){
     readout.textContent = `YOUR TURN: ${levelCount} ENTRIES${levelCount > 1 ? 's': ''}`;
 }
 
-
 //touchpad activation
 function touchpadAction() {
+    //const dataTouchpad = document.querySelector(`[data-touchpad='${'#id'}']`);
     const dataTouchpad = document.querySelector('.touchpad');
-    const sound = document.querySelector('.hidden');
+    //const sound = document.querySelector('.hidden');
     // const dataTouchpad= document.getElementsByName(`[data-touchpad='${color}']`);
     //console.log(dataTouchpad)
+    
     dataTouchpad.classList.add('activated');
-    sound.play();
- 
+    //sound.play();
+ console.log(dataTouchpad.classList)
+
+
     setTimeout(() => {
         dataTouchpad.classList.remove('activated');
     }, 350);
 }
 
 //This function will iterate over the advcomputerArray, and stall the iteration so all values arent called at once, turning on all touchpads at the same tine.
-function play(advcomputerArray) {
+function playNext(advcomputerArray) {
     advcomputerArray.forEach((color,index) => {
         setTimeout(() => {
             touchpadAction(color);
         }, (index + 1) * 600);
     });
 }
+//shifted outside of function to make global variable
+const touchpads = ['red','white','gray','green'];
 
 function sequenceGenerator() {
-    const touchpads = ['red','white','gray','green'];
+    //NOTE: tested generate on its own in console and it is functioning
     const generate = touchpads[Math.floor(Math.random() * touchpads.length)];
+    //console.log(generate)
     //Multiplying data-touch.length and Math.random creates a range between 1-4 instead of floats between 0-1. Math floor rounds fractional numbers down to whole numbers (0-3) 
     //referenced: https://discuss.codecademy.com/t/how-do-math-random-and-math-floor-work-together/490890
     return generate;
 }
+
+
 
 function advanceRound() {
     levelCount +=1;
@@ -65,11 +76,11 @@ function advanceRound() {
     readout.textContent = "REMEMBER THIS SEQUENCE";
     readout2.textContent= `LEVEL ${levelCount} of 15`;
 
-    const advcomputerArray =[...computerArray];
+    
     //spread operator: p.196 8.3.4 O'Reilly Javascript The Definitive Guide 7th Ed, by David Flanagan
     advcomputerArray.push(sequenceGenerator);
     //console.log(advcomputerArray);
-    play(advcomputerArray);
+    playNext(advcomputerArray);
 
     computerArray = [...advcomputerArray];
     setTimeout(() =>{
@@ -84,11 +95,14 @@ function capture(touchpad) {
     //console.log(index)
 
     const sound = document.querySelector(`[data-sfx='${touchpad}']`);
-    sound.play();
+    //sound.play();
 
     const remaining = computerArray.length - playerArray.length;
     //console.log
     
+    //console.log(playerArray[index])
+    //console.log(computerArray[index])
+
     if(playerArray[index] !== computerArray[index]) {
         //play exploding gif
         reset('TICK...TICK...BOOM! GAME OVER!');
