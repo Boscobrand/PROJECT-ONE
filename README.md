@@ -9,7 +9,8 @@ For this first project, we were presented with the opportunity to create a game 
 
 ## **BOMB SQUAD: THE GAME**
 
-*NOTE: For game installation and instructions, please scroll to the bottom of this page*
+*PLAY NOW:* https://boscobrand.github.io/PROJECT-ONE/
+*For game installation and instructions, please scroll to the bottom of this page*
 
 The concept of Bomb Squad was to increase a level of tension delivered by a normal Simon game, which typically rises at a steady rate.  This game is for players who enjoy a sequencing challenge under pressure (think Simon meets Perfection).  Bomb Squad adds to the experience by asking the player to dismantle a bomb by entering code sequences and matching 15 electronic touchpad patterns in a row, within a rapidly decreasing time limit.  The sounds were chosen to be a little less musical and a little more stress inducing.  Player progress is tracked in a Sequence Status display, all while a countdown clock ticks away to add even more of a challenge to the task.  The game applauds you if you disarm the bomb, and mourns you if you do not.
 
@@ -78,7 +79,7 @@ Once the project was approved internally, the game was created using HTML, CSS, 
 ### *Installation*
 
 - This game can be accessed and played remotely, so if you have a browser you have access.
-- You can access Bomb Squad here: 
+- You can access Bomb Squad here: https://boscobrand.github.io/PROJECT-ONE/
 
 ### *Instructions*
 
