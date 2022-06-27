@@ -1,5 +1,4 @@
 # PROJECT ONE: BOMB SQUAD
-A Stressful Simon Experience
 
 ## **CONTENTS**
 
